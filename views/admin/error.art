@@ -1,0 +1,25 @@
+{{extend './common/layout.art'}}
+
+{{block 'link'}}
+<style>
+    .error {
+        width: 750px;
+        height: 50px;
+        margin: 200px auto;
+        font-size: 25px;
+        line-height: 50px;
+        text-align: center;
+    }
+</style>
+
+{{/block}}
+{{block 'main'}}
+<p class="bg-danger error">{{msg}}</p>
+{{/block}}
+{{block 'script'}}
+<script>
+    setTimeout(function () {
+        location.href = '/admin/login'
+    }, 3000)
+</script>
+{{/block}}
